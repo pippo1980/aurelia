@@ -32,3 +32,16 @@ controller.post("/login",function(req,res,next){
 controller.get("/logout",function(req,res,next){
     res.redirect("/login");
 });
+
+
+/**
+ * 个人提醒
+ */
+controller.get("/notifications",function(req,res,next){
+    res.render("notifications",{layout:false});
+});
+
+
+controller.get("/messages",function(req,res,next){
+    res.render("messages",{layout:"message"});
+});
