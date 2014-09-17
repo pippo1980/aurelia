@@ -1,0 +1,22 @@
+{{!-- 表单验证 --}}
+{{#define "head"}}
+    <script type="text/javascript">
+        $(function () {
+            {{#if errors}}
+                {{#each errors}}
+                    var target = "#{{@key}}";
+                    $(target).closest('.form-group').addClass('has-error');
+                    var error = $("<span/>", {
+                        class: "help-block",
+                        text: "{{this.msg}}"
+                    });
+                    if ($(target).parent('.input-group').length) {
+                        error.insertAfter($(target).parent());
+                    } else {
+                        error.insertAfter($(target));
+                    }
+                {{/each}}
+            {{/if}}
+        });
+    </script>
+{{/define}}

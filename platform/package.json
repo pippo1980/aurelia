@@ -1,0 +1,48 @@
+{
+    "name": "aurelia",
+    "version": "1.0.1",
+    "description": "排号系统平台",
+    "main": "index.js",
+    "author": [
+        {
+            "name": "薛伟",
+            "email": "snowway.xue@gmail.com"
+        },
+        {
+            "name": "杜亚明",
+            "email": "philip.kissme@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "config": {
+        "blanket": {
+            "pattern": "lib",
+            "data-cover-never": "node_modules"
+        }
+    },
+    "keywords": ["排号", "订餐"],
+    "dependencies": {
+        "underscore": "1.6.0",
+        "underscore.string": "2.3.3",
+        "hashtable": "0.1.4",
+        "node-uuid": "1.4.1",
+        "superagent": "0.18.0",
+        "moment": "2.6.0",
+        "log4js": "0.6.9",
+        "socket.io": "0.9.16",
+        "socket.io-client": "0.9.16",
+        "apn": "1.5.2",
+        "redis": "0.10.1",
+        "mongojs": "0.13.0",
+        "debug": "0.8.1",
+        "express": "3.5.2",
+        "express-hbs": "0.7.9",
+        "express-validator": "2.1.2"
+    },
+    "devDependencies": {
+        "mocha": "1.18.2",
+        "muk": "0.3.1",
+        "blanket": "1.1.6",
+        "should": "3.3.1"
+    }
+}

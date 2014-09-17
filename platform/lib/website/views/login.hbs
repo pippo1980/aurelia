@@ -1,0 +1,51 @@
+{{#define "head"}}
+    <script type="text/javascript">
+        $(function () {
+            $('#loginForm').submit(function () {
+                if (jQuery('#username').val() == '' && jQuery('#password').val() == '') {
+                    jQuery('.nousername').fadeIn();
+                    jQuery('.nopassword').hide();
+                    return false;
+                }
+                if (jQuery('#username').val() != '' && jQuery('#password').val() == '') {
+                    jQuery('.nopassword').fadeIn().find('.userlogged h4, .userlogged a span').text(jQuery('#username').val());
+                    jQuery('.nousername,.username').hide();
+                    return false;
+                }
+                return true;
+            });
+        });
+    </script>
+{{/define}}
+{{#define "title"}}登录{{/define}}
+<body class="loginpage">
+<div class="loginbox">
+    <div class="loginboxinner">
+
+        <div class="logo">
+            <h1 class="logo">AMA.<span>Admin</span></h1>
+            <span class="slogan">后台管理系统</span>
+        </div>
+        <br clear="all"/>
+
+        <div class="nousername">
+            <div class="loginmsg">密码不正确.</div>
+        </div>
+        <form id="loginForm" action="/login" method="post">
+            <div class="username">
+                <div class="usernameinner">
+                    <input type="text" name="username" id="username" placeholder="用户名"/>
+                </div>
+            </div>
+            <div class="password">
+                <div class="passwordinner">
+                    <input type="password" name="password" id="password" placeholder="密码"/>
+                </div>
+            </div>
+            <button>登录</button>
+            <div class="keep"><input type="checkbox"/> 记住密码</div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
