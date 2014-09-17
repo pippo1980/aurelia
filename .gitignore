@@ -1,3 +1,4 @@
-platform/node_modules/*
+aurelia.iml
 .idea/*
+platform/node_modules/*
 platform/report/*

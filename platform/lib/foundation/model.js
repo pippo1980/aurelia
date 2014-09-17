@@ -2,7 +2,7 @@
  * 系统模型模块
  */
 var _ = require("./core")._
-    , logger = _.logger("model");
+var logger = _.logger("model");
 
 /**
  * 模型父类
